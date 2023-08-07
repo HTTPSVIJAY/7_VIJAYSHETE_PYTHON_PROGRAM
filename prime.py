@@ -1,15 +1,12 @@
-num = int(input("Enter a number: "))
+numb = [12,13, 14, 50, 6, 17, 18, 19,25]
+prime_numbers = []
 
-if num < 2:
-    print(num, "is not a prime number.")
-else:
-    is_prime = True
-    for i in range(2, int(num ** 0.5) + 1):
-        if num % i == 0:
-            is_prime = False
-            break
+for num in numb:
+    if num > 1:
+        for i in range(2, num):
+            if (num % i) == 0:
+                break
+        else:
+            prime_numbers.append(num)
 
-    if is_prime:
-        print(num, "is a prime number.")
-    else:
-        print(num, "is not a prime number.")
+print("Prime Numbers : ",prime_numbers)
